@@ -76,7 +76,12 @@ class dbObject {
      *
      * @var string
      */
-    private $_with = Array();
+    /**
+     * An array that holds has* objects which should be loaded together with main object
+     *
+     * @var array
+     */
+    private $_with = array();
     /**
      * Per page limit for pagination
      *
@@ -603,8 +608,8 @@ class dbObject {
     }
 
     /**
-     * Function queries hasMany relations if needed and also converts hasOne object names
-     *
+        if (!is_array($this->_with) || count($this->_with) == 0)
+            return;
      * @param array $data
      */
     private function processAllWith (&$data, $shouldReset = true) {
