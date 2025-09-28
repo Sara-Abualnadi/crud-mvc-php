@@ -1,8 +1,8 @@
 <?php 
-define("DS",DIRECTORY_SEPARATOR);
+define("DS",DIRECTORY_SEPARATOR);//بتعامل مع البلاتفورم الي بنشتغل عليه
 define("ROOT_PATH",dirname(__DIR__).DS);
 define("APP",ROOT_PATH.'APP'.DS);
-define("CORE",APP.'Core'.DS);
+define("CORE",APP.'Core'.DS);//const
 define("CONFIG",APP.'Config'.DS);
 define("CONTROLLERS",APP.'Controllers'.DS);
 define("MODELS",APP.'Models'.DS);
@@ -23,5 +23,5 @@ spl_autoload_register('spl_autoload',false);
 
 
 
-new App();
+new App();//ريكوير من نفسه
 

@@ -29,7 +29,7 @@ class App
      */
     private function prepareURL($url)
     {
-        $url = trim($url,"/");
+        $url = trim($url,"/");//بقيم ال/ الزياده اخر الurl
         if(!empty($url))
         {
             $url = explode('/',$url);
