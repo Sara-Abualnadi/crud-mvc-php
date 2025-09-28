@@ -10,6 +10,7 @@ class App
     protected $action = "index";
     // params 
     protected $params=[];
+    //carry it 
 
     public function __construct()
     {
